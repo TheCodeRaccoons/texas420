@@ -45,7 +45,7 @@ constructor(props){
             chill or just get away from some of the toxicity. We provide you with 420 scrap every 
             4 hours and 20 min to aid your progress!
             We have 4 non-playing admins that will help enforce the rules and assist you in any trouble: </div>
-<div className="reee">sfgdfgsdgsdfgsdfg</div>
+            <div className="reee">sfgdfgsdgsdfgsdfg</div>
         </div>
         <Rules />
     </div>

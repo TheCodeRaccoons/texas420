@@ -183,7 +183,7 @@ $ease-slow: 600ms ease;
       $width: 38%;
       width: $width;
       height: ($width * 1.61);
-      background: url('./media/bg/DOME.svg') no-repeat center center;
+      background: url('./media/Adornments/RustAdornmentDome.svg') no-repeat center center;
       background-size: contain; 
       display: flex;
       align-items: center;
@@ -208,18 +208,13 @@ $ease-slow: 600ms ease;
   }
 
   .Rules{
-    background: black;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    color:$font-primary
+    background-image: linear-gradient(to bottom,#000000, #28140f);
+    color: $font-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
-  
-  .route-wrapper {
-    position: absolute;
-  }
-  
-  .route-wrapper > div {
-    position: absolute;
-    width: 100vw;
-    height: inherit;
-  }
+   
