@@ -1,0 +1,225 @@
+/*Color Palette*/
+$color-primary: #ebf7ff;
+$color-secondary: #EB743C;
+$scroll-primary: #1A252D;
+$scroll-secondary: #4a4172;
+$color-background-v: #1A252D;
+$font-primary: #ebf7ff;
+/*transitions*/
+$ease-fast: 150ms ease;
+$ease-mid: 400ms ease;
+$ease-slow: 600ms ease;
+
+/*Fonts*/ 
+@font-face {
+  font-family: rust-title;
+  src: url(./media/Fonts/Rust.ttf);
+}
+@font-face {
+  font-family: roboto;
+  src: url(./media/Fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: roboto-thin;
+  src: url(./media/Fonts/Roboto-Thin.ttf);
+}
+
+/*Scrollbar*/ 
+.parallax::-webkit-scrollbar{
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #000000;
+}
+
+.parallax::-webkit-scrollbar-track{     
+  background: rgba($color:  $scroll-primary, $alpha: 1); 
+}
+
+.parallax::-webkit-scrollbar-thumb { 
+  background: rgba($color:  $scroll-secondary, $alpha: 0.5); 
+}
+
+/*Navigation*/ 
+.sideNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  color: $font-primary;
+  height: 1vh;
+  z-index: 1;
+  transition: all 0.2s ease-in-out 0s;
+  border-bottom: 4em solid transparent; 
+} 
+
+.visible-nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #EB743C;
+  color: #ffffff;
+  height: 1vh;
+  z-index: 1;
+  border-bottom: 4em solid transparent;
+  border-image: url(./media/LineBar.svg);
+  border-image-repeat: revert;
+  border-image-slice: 100;
+  border-image-outset: 1.55em;
+} 
+
+.sideNav-navigation {
+  display: flex;
+  align-items: center;
+  height: 8vh;
+  padding: 0 1rem;
+} 
+.sideNav-navigation-items {
+    width: 100%;   
+    margin: 0;
+    padding: 0;
+  ul{ 
+    display: flex;  
+    width: 100%;
+    .desc{ 
+      margin-left: auto;
+      margin-right: 5vw;
+      span{
+        text-decoration: underline;
+      }
+    }
+  }
+  li {
+    display: inline-block;
+    list-style: none;
+    font-size: 2.5vh;
+    padding: 0 0.5rem;
+    text-decoration: none !important;     
+    margin: auto 10px; 
+  }   
+  a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 2.5vh;
+  transition: all 400ms ease;
+  font-family: rust-title;
+  font-weight: 200;
+}
+}
+.sideNav-logo {
+    margin-left: 0;
+}
+
+/*Home parallax section*/
+  .parallax {
+    perspective: 100px;
+    height: 100vh;
+    overflow-x: hidden;
+   overflow-y: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+}   
+  
+  .parallax__layer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    
+    img{
+      display: block;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+  
+  .parallax__cover{
+    background: #2D112B;
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 250px;
+    z-index: 2;
+  }
+  
+  $parallax__layers: 4;
+  
+  @for $i from 0 through $parallax__layers {
+    @if $i >= $parallax__layers - 1 {
+      .parallax__layer__#{$i}{ 
+        $x: ($parallax__layers - $i) /2  ;
+       transform: translateZ(-100 * $x#{px}) translateY(10) scale($x + 1);
+      }
+    }
+    @else{ 
+      $x: ($parallax__layers - $i) / 2;
+      .parallax__layer__#{$i}{
+        transform: translateZ(-100 * $x#{px}) scale($x + 1);
+     }
+    }
+  }
+
+
+  .welcome{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #28140f, #000000);
+    color: $font-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    .title-section{
+      font-family: rust-title;
+      $width: 38%;
+      width: $width;
+      height: ($width * 1.61);
+      background: url('./media/bg/DOME.svg') no-repeat center center;
+      background-size: contain; 
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      .title{ 
+        font-size: 3em; 
+        width: 100%;
+      }
+      .subtitle{    
+        font-size: 0.75em;
+        width: 100%;
+      }
+    }
+    .info{ 
+      width: 58%;
+      text-align: left;
+      font-size: 1.5em;
+    }
+    .reee{
+      flex: 1;
+    }
+  }
+
+  .Rules{
+    background: black;
+    width: 100vw;
+    height: 100vh;
+    color:$font-primary
+  }
+  
+  .route-wrapper {
+    position: absolute;
+  }
+  
+  .route-wrapper > div {
+    position: absolute;
+    width: 100vw;
+    height: inherit;
+  }
