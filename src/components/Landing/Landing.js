@@ -27,16 +27,16 @@ constructor(props){
         return (
         <div className="parallax">
     <div className="parallax__layer parallax__layer__0">
-        <img src={bg4} />
+        <img src={bg4} alt="bg section 4"/>
     </div>
     <div className="parallax__layer parallax__layer__1">
-        <img src={bg3} />
+        <img src={bg3}  alt="bg section 3"/>
     </div>
     <div className="parallax__layer parallax__layer__2">
-        <img src={bg2}  />
+        <img src={bg2}   alt="bg section 2"/>
     </div>
     <div className="parallax__layer parallax__layer__3">
-        <img src={bg1}  />
+        <img src={bg1}  alt="bg section 1" />
     </div>  
     <div className="parallax__cover"> 
         <div className='welcome'>
@@ -45,7 +45,6 @@ constructor(props){
             chill or just get away from some of the toxicity. We provide you with 420 scrap every 
             4 hours and 20 min to aid your progress!
             We have 4 non-playing admins that will help enforce the rules and assist you in any trouble: </div>
-            <div className="reee">sfgdfgsdgsdfgsdfg</div>
         </div>
         <Rules />
     </div>

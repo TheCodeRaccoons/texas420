@@ -5,6 +5,8 @@ $scroll-primary: #1A252D;
 $scroll-secondary: #4a4172;
 $color-background-v: #1A252D;
 $font-primary: #ebf7ff;
+$font-accent: #EB743C;
+$font-accent-2: #8b423b;
 /*transitions*/
 $ease-fast: 150ms ease;
 $ease-mid: 400ms ease;
@@ -18,11 +20,18 @@ $ease-slow: 600ms ease;
 @font-face {
   font-family: roboto;
   src: url(./media/Fonts/Roboto-Regular.ttf);
-}
-
+} 
 @font-face {
   font-family: roboto-thin;
   src: url(./media/Fonts/Roboto-Thin.ttf);
+}
+html,
+body,
+.root,
+.App{
+  overflow-x:hidden;
+  height: auto;
+  width: 100vw;
 }
 
 /*Scrollbar*/ 
@@ -30,14 +39,17 @@ $ease-slow: 600ms ease;
   width: 0.5rem;
   height: 0.5rem;
   background: #000000;
+  z-index: 15;
 }
 
 .parallax::-webkit-scrollbar-track{     
   background: rgba($color:  $scroll-primary, $alpha: 1); 
+  z-index: 15;
 }
 
 .parallax::-webkit-scrollbar-thumb { 
   background: rgba($color:  $scroll-secondary, $alpha: 0.5); 
+  z-index: 15;
 }
 
 /*Navigation*/ 
@@ -107,11 +119,68 @@ $ease-slow: 600ms ease;
   font-family: rust-title;
   font-weight: 200;
 }
-}
-.sideNav-logo {
-    margin-left: 0;
+} 
+
+.disc-pup{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 10px;
+  top: 100px;
+  z-index: 3;
+  border-radius: 25% 25% 25% 25%;
+  background: url(./media/tabs/disc.png);
+  background-repeat: no-repeat;
+  background-size: contain; 
+  cursor: pointer; 
 }
 
+.discord{
+  width: 150px;
+  height: 150px;
+  background: violet;
+  position: absolute;
+  right: -150px;
+  top:100px;
+  transition: all $ease-fast;
+  z-index: 4;
+  .closeTab{ 
+    cursor: pointer;
+  }
+}
+
+.show{  
+  right: 0px !important;
+  transition: all $ease-fast; 
+}
+ 
+.cal-pup{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 10px;
+  top: 150px;
+  z-index: 3;
+  border-radius: 25% 25% 25% 25%;
+  background: url(./media/tabs/calendar.png);
+  background-repeat: no-repeat;
+  background-size: contain; 
+  cursor: pointer; 
+}
+
+.calendar{
+  width: 150px;
+  height: 150px;
+  background: blue;
+  position: absolute;
+  right: -150px;
+  top:100px;
+  transition: all $ease-fast;
+  z-index: 4;
+  .closeTab{ 
+    cursor: pointer;
+  }
+}
 /*Home parallax section*/
   .parallax {
     perspective: 100px;
@@ -123,7 +192,6 @@ $ease-slow: 600ms ease;
     left: 0;
     right: 0;
     bottom: 0; 
-}   
   
   .parallax__layer{
     position: absolute;
@@ -166,8 +234,8 @@ $ease-slow: 600ms ease;
         transform: translateZ(-100 * $x#{px}) scale($x + 1);
      }
     }
-  }
-
+  } 
+}   
 
   .welcome{
     width: 100%;
@@ -209,12 +277,55 @@ $ease-slow: 600ms ease;
 
   .Rules{
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-image: linear-gradient(to bottom,#000000, #28140f);
-    color: $font-primary;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    color: $font-primary;  
+    text-align: left;
+    padding-bottom: 50px;
+    h1{
+      margin-top:0px;
+      font-family: rust-title;
+      text-align: center;
+      font-size: 3em;
+      padding-bottom: 25px;
+      padding-top:25px; 
+    }
+    .rules-data{
+      height: auto;
+      width: 60%;
+      margin:auto; 
+      .title{ 
+        font-family: rust-title;
+        text-align: left;
+        font-size: 1.25em;
+        padding-bottom: 25px;
+        padding-top:25px;
+        color: $font-accent;
+      }
+      .info{ 
+        font-family: roboto; 
+        font-size: 1em; 
+        padding-bottom: 25px;
+      }
+      li{
+        padding-left: 50px;
+      }
+      .important{
+        text-decoration: underline;
+        color: $font-accent-2;
+        font-size: 1.15em; 
+        font-weight: bold;
+      }
+      table{
+        width: 80%;
+        font-weight: bold;
+        padding-left: 50px;
+        tbody>tr>td{  
+          width: 50%;
+          color: $font-accent-2;
+        }
+      }
+    }
+
   }
    
