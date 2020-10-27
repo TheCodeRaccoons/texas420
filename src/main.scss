@@ -27,14 +27,14 @@ $ease-slow: 600ms ease;
 }
 html,
 body,
-.root,
+#root,
 .App{
-  overflow-x:hidden;
+  overflow-x: hidden;
   height: auto;
   width: 100vw;
 }
 
-/*Scrollbar*/ 
+/*Scrollbars*/ 
 .parallax::-webkit-scrollbar{
   width: 0.5rem;
   height: 0.5rem;
@@ -52,14 +52,31 @@ body,
   z-index: 15;
 }
 
+.leaderboard::-webkit-scrollbar{
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #000000;
+  z-index: 15;
+}
+
+.leaderboard::-webkit-scrollbar-track{     
+  background: rgba($color:  $scroll-primary, $alpha: 0.7); 
+  z-index: 15;
+}
+
+.leaderboard::-webkit-scrollbar-thumb { 
+  background: rgba($color:  $font-accent-2, $alpha: 0.5); 
+  z-index: 15;
+}
+
 /*Navigation*/ 
 .sideNav {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   background: rgba(0, 0, 0, 0);
-  color: $font-primary;
+  color: $font-primary; 
   height: 1vh;
   z-index: 1;
   transition: all 0.2s ease-in-out 0s;
@@ -136,16 +153,21 @@ body,
 }
 
 .discord{
-  width: 150px;
-  height: 150px;
-  background: violet;
+  width: 350px;
+  height: auto; 
   position: absolute;
-  right: -150px;
+  right: -350px;
   top:100px;
   transition: all $ease-fast;
   z-index: 4;
   .closeTab{ 
     cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    position: absolute;
+    top:10px;
+    right: 25px
   }
 }
 
@@ -169,29 +191,36 @@ body,
 }
 
 .calendar{
-  width: 150px;
-  height: 150px;
-  background: blue;
+  width: 500px;
+  height: auto;
+  background: #FFFFFF;
   position: absolute;
-  right: -150px;
+  right: -500px;
   top:100px;
   transition: all $ease-fast;
   z-index: 4;
   .closeTab{ 
     cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 2rem;
+    font-weight: bold;
   }
 }
+
 /*Home parallax section*/
   .parallax {
     perspective: 100px;
     height: 100vh;
     overflow-x: hidden;
-   overflow-y: auto;
+    overflow-y: auto;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0; 
+    background: $font-accent-2;
   
   .parallax__layer{
     position: absolute;
@@ -211,11 +240,11 @@ body,
   .parallax__cover{
     background: #2D112B;
     display: block;
-    position: absolute;
+    position: relative;
     top: 100%;
     left: 0;
     right: 0;
-    height: 250px;
+    height: 50%;
     z-index: 2;
   }
   
@@ -257,18 +286,18 @@ body,
       align-items: center;
       justify-content: center; 
       .title{ 
-        font-size: 3em; 
+        font-size: 2.5vw; 
         width: 100%;
       }
       .subtitle{    
-        font-size: 0.75em;
+        font-size: 2vw;
         width: 100%;
       }
     }
     .info{ 
       width: 58%;
       text-align: left;
-      font-size: 1.5em;
+      font-size: 1vw;
     }
     .reee{
       flex: 1;
@@ -276,24 +305,71 @@ body,
   }
 
   .Rules{
+    margin-top: 150vh;
     width: 100%;
     height: auto;
-    background-image: linear-gradient(to bottom,#000000, #28140f);
-    color: $font-primary;  
+    background-image: linear-gradient(to bottom, #000000, #28140f);
+    color: #ebf7ff;
     text-align: left;
     padding-bottom: 50px;
+    position: relative;
+    font-size: 1em;
     h1{
       margin-top:0px;
       font-family: rust-title;
       text-align: center;
-      font-size: 3em;
+      font-size: 3vw;
       padding-bottom: 25px;
       padding-top:25px; 
     }
+    .rules_img{
+      &.img_1{ 
+        background: url('./media/Adornments/RustAdornment1.svg') no-repeat center center;
+        background-size: contain; 
+        width: 30vw;
+        height: 30vw;
+        position: absolute;
+        right: -5vw; 
+        top: 120px;
+        transform: scaleX(-1)
+      }
+      &.img_2{
+        background: url('./media/Adornments/RustAdornmentRecycler.svg') no-repeat center center;
+        background-size: contain; 
+        width: 25vw;
+        height: 25vw;
+        position: absolute;
+        left: -5vw; 
+        top: 30%;
+        
+      } 
+      &.img_3{ 
+        background: url('./media/Adornments/RustAdornmentHorse.svg') no-repeat center center;
+        background-size: contain; 
+        width: 25vw;
+        height: 25vw;
+        position: absolute;
+        right: -5vw; 
+        bottom: 30%;
+      }
+      &.img_4{ 
+        background: url('./media/Adornments/RustAdornmentWindmill.svg') no-repeat center center;
+        background-size: contain; 
+        width: 25vw;
+        height: 25vw;
+        position: absolute;
+        left: -5vw; 
+        bottom: 50px;
+      }
+    }
+
     .rules-data{
       height: auto;
       width: 60%;
       margin:auto; 
+      z-index: 1;
+      position: relative;
+      font-size: 1vw;
       .title{ 
         font-family: rust-title;
         text-align: left;
@@ -327,5 +403,84 @@ body,
       }
     }
 
+  } 
+
+  .Metrics{  
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #28140f, #000000);
+    color: $font-primary;
+    h1{
+      font-family: rust-title;
+      text-align: left;
+      font-size: 3vw; 
+      color: $color-primary; 
+      margin-top: 0;
+      padding-top: 100px;
+      width: 100%;
+      text-align: center;
+    }
+    .insights{ 
+      width: 100%; 
+      height: 70%;
+      color: $font-primary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      overflow: hidden;
+      .server-info{ 
+        font-family: roboto;  
+        width: 40%; 
+        height: 100%;
+        text-align: left; 
+        margin: auto;
+        .server-img{
+          width: 95%;
+          margin: auto;
+          height: fit-content;
+          img{
+            width: 100%;
+          }
+        }
+        .title{
+          width: 100%;
+          font-size: 1.5vw;
+          text-align: center;
+          padding-bottom: 5px;
+        }
+        .info{
+          width: 100%;
+          font-size: 1.25vw;
+          text-align: center;
+        } 
+      }
+      .leaderboard{
+        width: 58%;
+        text-align: left;
+        font-size: 1vw;
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x:hidden; 
+        table{
+          margin: auto;
+          width: 100%; 
+          th{ 
+            font-family: rust-title;
+            text-align: left;
+            font-size: 1.25em; 
+            color: $font-accent;
+          }
+          tr>th:nth-child(1),
+          tr>td:nth-child(1){
+            text-align: center;
+          }
+          tr>th:nth-child(3),
+          tr>td:nth-child(3){
+            text-align: left;
+          }
+        }
+      }
+    }
   }
    
