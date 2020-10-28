@@ -33,7 +33,7 @@ class App extends Component {
         <div className="disc-pup" onClick={this.showDiscord}></div>
         <div className={this.state.showDisc ? "discord show" : "discord"}>
           <span className="closeTab" onClick={this.showDiscord}>X</span> 
-          <iframe title="Disc widget" src="https://discordapp.com/widget?id=663941127757627393&theme=dark" width="980" height="500" allowtransparency="true" frameBorder="0"></iframe>
+          <iframe title="Disc widget" src="https://discordapp.com/widget?id=663941127757627393&theme=dark" width="500" height="500" allowtransparency="true" frameBorder="0"></iframe>
         </div>
         <div className="cal-pup" onClick={this.showCalendar}></div>
         <div className={this.state.showCal ? "calendar show" : "calendar"}> 

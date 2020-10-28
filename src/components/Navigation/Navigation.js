@@ -28,7 +28,13 @@ const sideBar = props =>
                     offset={0}
                     duration={500}
                     containerId="containerElement">Metrics</ Link></li> 
-                <li><Link to='/'>donations</Link></li> 
+                <li><Link 
+                    activeClass="active" 
+                    to="Donations" 
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                    containerId="containerElement">Donations</Link></li> 
                 <li className="desc"><span>Texas420</span> A noob "friendly" no KOS server</li>
                 </ul>
             </div> 

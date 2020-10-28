@@ -7,6 +7,7 @@ $color-background-v: #1A252D;
 $font-primary: #ebf7ff;
 $font-accent: #EB743C;
 $font-accent-2: #8b423b;
+$font-accent-3: #5a2b27;
 /*transitions*/
 $ease-fast: 150ms ease;
 $ease-mid: 400ms ease;
@@ -87,7 +88,7 @@ body,
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   background: #EB743C;
   color: #ffffff;
   height: 1vh;
@@ -106,12 +107,12 @@ body,
   padding: 0 1rem;
 } 
 .sideNav-navigation-items {
-    width: 100%;   
+    width: 100vw;   
     margin: 0;
     padding: 0;
   ul{ 
     display: flex;  
-    width: 100%;
+    width: 100vw;
     .desc{ 
       margin-left: auto;
       margin-right: 5vw;
@@ -266,8 +267,9 @@ body,
   } 
 }   
 
+/*info sections*/
   .welcome{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-image: linear-gradient(to bottom, #28140f, #000000);
     color: $font-primary;
@@ -298,15 +300,12 @@ body,
       width: 58%;
       text-align: left;
       font-size: 1vw;
-    }
-    .reee{
-      flex: 1;
-    }
+    } 
   }
 
   .Rules{
     margin-top: 150vh;
-    width: 100%;
+    width: 100vw;
     height: auto;
     background-image: linear-gradient(to bottom, #000000, #28140f);
     color: #ebf7ff;
@@ -406,7 +405,7 @@ body,
   } 
 
   .Metrics{  
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-image: linear-gradient(to bottom, #28140f, #000000);
     color: $font-primary;
@@ -435,12 +434,15 @@ body,
         height: 100%;
         text-align: left; 
         margin: auto;
+        background: rgba($color: $color-background-v, $alpha: 0.5);
         .server-img{
           width: 95%;
           margin: auto;
           height: fit-content;
+          padding-top: 25px;
           img{
             width: 100%;
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
           }
         }
         .title{
@@ -483,4 +485,316 @@ body,
       }
     }
   }
-   
+
+  .Donations{ 
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(to bottom, #000000, #28140f);
+    color: $font-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    h1{
+      font-family: rust-title;
+      text-align: left;
+      font-size: 3vw; 
+      color: $color-primary; 
+      margin-top: 0;
+      padding-top: 100px;
+      width: 100%;
+      text-align: center;
+    }
+    .title-section{
+      font-family: rust-title;
+      $width: 30%;
+      width: $width;
+      height: ($width * 1.61);
+      //background: url('./media/Adornments/RustAdornmentDome.svg') no-repeat center center;
+      background-size: contain; 
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      .title{ 
+        font-size: 2.5vw; 
+        padding: 10px;
+        border: 2px solid $font-accent-2;
+        background: $font-accent-2;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all $ease-mid;
+        &:hover{
+          background: $font-accent-3;
+        }
+      }
+      .subtitle{    
+        font-size: 2vw;
+        width: 100%;
+      }
+    }
+    .thanks-txt{ 
+      width: 50%;
+      text-align: center;
+      font-size: 1vw;
+    }
+  }
+
+
+  /*Mobile handling*/
+  @media only screen and (max-width: 768px) { 
+    html,
+    body,
+    #root,
+    .App{
+      overflow-x: hidden;
+      height: auto;
+      width: 100vw;
+    }
+
+    /*Discord and calendar pop ups*/
+    .disc-pup{
+      display: none;
+    }
+
+    .discord{
+      display: none;
+      .closeTab{ 
+        cursor: pointer;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #FFFFFF;
+        position: absolute;
+        top:10px;
+        right: 25px
+      }
+    }
+
+    .show{  
+      right: 0px !important;
+      transition: all $ease-fast; 
+    }
+    
+    .cal-pup{
+      display: none;
+    }
+
+    .calendar{
+      display: none;
+      .closeTab{ 
+        cursor: pointer;
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+    } 
+
+    /*Remove parallax section*/
+    .parallax__cover{
+      position: relative !important;
+      top: 0 !important;
+      left: 0 !important;
+      .welcome{ 
+      width: 100%;
+      height: 75vh;
+      background-image: linear-gradient(to bottom, #28140f, #000000);
+      color: $font-primary; 
+      .title-section{
+        font-family: rust-title;
+        width: 200px;
+        margin: 25px auto;
+        height: 200px;
+        background: url('./media/Adornments/RustAdornmentDome.svg') no-repeat center center;
+        background-size: contain; 
+        display: flex; 
+        justify-content: center; 
+        .title{ 
+          font-size: 1.5rem;
+          width: 100%;
+        }
+        .subtitle{    
+          font-size: 1rem;
+          width: 100%;
+        }
+      }
+      .info{ 
+        width: 90%;
+        text-align: center;
+        font-size: 1rem;
+      } 
+      }
+    }
+
+    /*Mobile rules*/
+    .Rules{
+      margin-top: 25vh; 
+      position: relative; 
+      h1{
+        margin-top:0px;
+        font-family: rust-title;
+        text-align: center;
+        font-size: 1.5rem;
+        padding-bottom: 5px;
+        padding-top: 50px; 
+      }
+      .rules_img{
+        &.img_1,
+        &.img_2,
+        &.img_3,
+        &.img_4{ display: none;
+        } 
+      }
+
+      .rules-data{
+        height: auto;
+        width: 80%;
+        margin:auto; 
+        z-index: 1;
+        position: relative;
+        font-size: 0.75rem;
+        .title{ 
+          font-family: rust-title;
+          text-align: center;
+          font-size: 1.5rem;
+          padding-bottom: 25px;
+          padding-top:25px;
+          color: $font-accent;
+        }
+        .info{ 
+          font-family: roboto; 
+          font-size: 1em; 
+          padding-bottom: 25px;
+        }
+        li{
+          padding-left: 25px;
+        }
+        .important{
+          text-decoration: underline;
+          color: $font-accent-2;
+          font-size: 1.15rem; 
+          font-weight: bold;
+          text-align: center;
+        }
+        table{
+          width: 80%;
+          font-weight: bold;
+          padding-left: 25px;
+          tbody>tr>td{  
+            width: 50%;
+            color: $font-accent-2;
+            text-align: center;
+          }
+        }
+      }
+
+    } 
+  
+    .Metrics{  
+      width: 100%;
+      height: auto;
+      background-image: linear-gradient(to bottom, #28140f, #000000);
+      color: $font-primary;
+      h1{
+        margin-top:0px;
+        font-family: rust-title;
+        text-align: center;
+        font-size: 1.5rem;
+        padding-bottom: 5px;
+        padding-top: 50px; 
+      }
+      .insights{ 
+        width: 100%; 
+        height: 100vh;
+        color: $font-primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow: hidden;
+        .server-info{ 
+          font-family: roboto;  
+          width: 90%; 
+          height: auto; 
+          margin: auto;
+          background: rgba($color: $color-background-v, $alpha: 0.5);
+          padding-bottom: 25px;
+          .server-img{
+            width: 95%;
+            margin: auto;
+            height: fit-content;
+            padding-top: 25px;
+            img{
+              width: 100%;
+              mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+            }
+          }
+          .title{
+            width: 100%;
+            font-size: 1.5rem;
+            text-align: center;
+            padding-bottom: 5px;
+          }
+          .info{
+            width: 100%;
+            font-size: 0.75rem;
+            text-align: center;
+          } 
+        }
+
+        .leaderboard{
+          width: 90%;
+          text-align: left;
+          font-size: 1rem;
+          height: 50%;
+          overflow-y: scroll;
+          overflow-x:hidden; 
+          margin-top: 25px;
+          table{
+            margin: auto;
+            width: 100%; 
+            th{ 
+              font-family: rust-title;
+              text-align: center;
+              font-size: 1.25rem; 
+              color: $font-accent;
+            }
+            tr>th:nth-child(1),
+            tr>td:nth-child(1){
+              text-align: center;
+            }
+            tr>th:nth-child(3),
+            tr>td:nth-child(3){
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+
+    
+    .Donations{  
+      height: auto;
+      h1{
+        margin-top:0px;
+        font-family: rust-title;
+        text-align: center;
+        font-size: 1.5rem;
+        padding-bottom: 5px;
+        padding-top: 50px; 
+      }
+      .title-section{
+        font-family: rust-title;
+        width: 100%; 
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+        }  
+      .thanks-txt{ 
+        width: 90%;
+        text-align: center;
+        font-size: 1rem;
+      }
+    }
+  }

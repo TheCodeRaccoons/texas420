@@ -6,6 +6,7 @@ import bg4 from '../../media/bg/RustLighthouse04-01.svg'
 import Rules from '../Rules/Rules'; 
 import Metrics from '../Metrics/Metrics'; 
 import {Element, Events, animateScroll as scroll, scroller } from 'react-scroll';
+import Donations from '../Donations/Donations';
 
 class Landing extends React.Component {   
 constructor(props){
@@ -65,6 +66,7 @@ constructor(props){
         </Element> 
         <Rules />
         <Metrics />
+        <Donations />
     </Element>
         )
     }
