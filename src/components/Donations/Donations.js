@@ -17,7 +17,7 @@ class Donations extends React.Component {
                                     There is no in-game benefit to donation, its just a way to say thanks to the admins and 
                                     help contribute to server upkeep cost. </div>
                 <div className="title-section">
-                    <img src={paypalbtn} alt="paypal donate" />
+                    <a href="paypal.me/circlep" alt="paypal donation" target="_blank"><img src={paypalbtn} alt="paypal donate" /></a>
                 </div> 
         </Element>  
         )

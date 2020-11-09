@@ -7,6 +7,7 @@ import Rules from '../Rules/Rules';
 import Metrics from '../Metrics/Metrics'; 
 import {Element, Events, animateScroll as scroll, scroller } from 'react-scroll';
 import Donations from '../Donations/Donations';
+import Powered from '../Powered/Powered';
 
 class Landing extends React.Component {   
 constructor(props){
@@ -67,6 +68,7 @@ constructor(props){
         <Rules />
         <Metrics />
         <Donations />
+        <Powered />
     </Element>
         )
     }
