@@ -1,6 +1,6 @@
 ##Teams & Alliances
 - The max team size is 4. There is no limit to how many teams may ally with one another.
-- Withing each base/compount may only exist 1 team (we count by beds).
+- Within each base/compound may only exist 1 team (we count by beds).
 
 ##No KOS (Kill on Sight)
 KOS is only allowed in selected PvP zones
@@ -15,9 +15,9 @@ Launch Site | Attack Helicopter
 Military Tunnels | Crash sites
 Oil Rig	    | Locked Crates
 Power Plant	| Raids / Counter raids 
-- In the event of a crate or box, the PvP ends as soon as its contents have been collected and the person has left the area (1 square surriounding airdrop in all directions).
+- In the event of a crate or box, the PvP ends as soon as its contents have been collected and the person has left the area (1 square surrounding airdrop in all directions).
 - An easy way to tell if the crate has been collected is to open the map (press G) and check if the icon is still there. 
-- PvP for Attack Helicopter crates stops when the explosion marker has disappear on the map.
+- PvP for Attack Helicopter crates stops when the explosion marker has disappeared on the map.
 - Puzzle monuments: KOS areas include any square that has part of the monument in it.
 - Quarries: KOS area is only inside the quarry, not the whole square.
 ##Raids
@@ -32,12 +32,12 @@ __DON'Ts
 - Do not raid noob bases, if it is still thatch/twig leave it alone. If someone has a starter base and did not lock their doors leave them alone or inform them in chat.
 - Helis are NOT raid material, do not use them to crash into a player's base.
 - Do not lure attack heli in to destroy another player's base.
-- Locking players out of their base once the raid is over. If you pur down doors/locks, leave a note with the new code OR remove the locks/leave unlocked. *** This includes stealing bases***
+- Locking players out of their base once the raid is over. If you put down doors/locks, leave a note with the new code OR remove the locks/leave unlocked. *** This includes stealing bases***
 - Locking the TC. If you place a new TC it must be unlocked. Do not wall off TC
 - Foundation wiping
 - Walling off player's bags or leaving your own placed bag in the raided base.
-- No door camping with no raiding supplies; you are not daiding, you are just being a jerk. 
-- No trap bases (fake bases you are not living in, made to lure/kill other players). You may have traps in your own base! As long as it's within base walls(high external walls it is fine.
+- No door camping with no raiding supplies; you are not raiding, you are just being a jerk. 
+- No trap bases (fake bases you are not living in, made to lure/kill other players). You may have traps in your own base! As long as it's within base walls / high external walls it is fine.
 ##SAMS Sites
 All SAMS Sites must be labeled on the map with a vending machine. Ex: SAMS Site! No Fly Zone!
 ##Be respectful! This is a NOOB server.
@@ -45,5 +45,5 @@ All SAMS Sites must be labeled on the map with a vending machine. Ex: SAMS Site!
 - Do not place any traps/land mines out in the open. All things that can hurt/kill have to be within your own high walls/base.
 ##Stealing
 - If someone catches you stealing THEIR things they are allowed to kill you. This can include furnance materials, helis, horses, cars (keep them locked!) or things out of a recycler they're using.
-- If you walk into someone's base or compount uninvited they CAN kill you.
+- If you walk into someone's base or compound uninvited they CAN kill you.
 **ONLY Admins can speak with authority, do not make claims for admins based on that authority. Basically, do not speak for us, we will make the decisions on actions needed to be taken. We understand this is Rust but it is a learning/chill server. BE NICE sometimes!
