@@ -1,3 +1,5 @@
+@use "sass:math";
+
 /*Color Palette*/
 $color-primary: #ebf7ff;
 $color-secondary: #EB743C;
@@ -266,18 +268,19 @@ html, body, body > div, .App {
   @for $i from 0 through $parallax__layers {
     @if $i >= $parallax__layers - 1 {
       .parallax__layer__#{$i}{ 
-        $x: ($parallax__layers - $i) /2  ;
+        $x: math.div(($parallax--layers - $i),2)  ;
        transform: translateZ(-100 * $x#{px}) translateY(10) scale($x + 1);
       }
     }
     @else{ 
-      $x: ($parallax__layers - $i) / 2;
+      $x: math.div(($parallax--layers - $i),2);
       .parallax__layer__#{$i}{
         transform: translateZ(-100 * $x#{px}) scale($x + 1);
-     }
+      }
     }
-  } 
-}   
+  }
+  
+}
 
 /*info sections*/
   .welcome{

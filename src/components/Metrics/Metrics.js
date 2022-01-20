@@ -24,18 +24,16 @@ const leaderboard = {
   };
 
 class Metrics extends React.Component {   
-    constructor(props) {
-        super(props); 
-        this.state = {
-            server_name: "Texas 420",
-            server_curr_players: "0",
-            server_max_players: "100",
-            server_last_wipe: currDate,
-            server_img: "",
-            server_map_type: "",
-            server_leaderboard: []
-        }
-    } 
+     
+    state = {
+        server_name: "Texas 420",
+        server_curr_players: "0",
+        server_max_players: "100",
+        server_last_wipe: currDate,
+        server_img: "",
+        server_map_type: "",
+        server_leaderboard: []
+    }
     
     getWipeDate = (d) => {
        let wipeDate = new Date(d);
@@ -103,7 +101,7 @@ class Metrics extends React.Component {
             <h1>Metrics</h1>
             <div className="insights">
                 <div className="server-info">
-                    <div className="server-img"><img src={this.state.server_img} /></div>
+                    <div className="server-img"><img alt="server Img" src={this.state.server_img} /></div>
                     <div className="title">{this.state.server_name}</div>
                     <div className="info">{this.state.server_map_type} - {this.state.server_curr_players}/{this.state.server_max_players}    Last wipe: {this.getWipeDate(this.state.server_last_wipe)}</div>
                 </div>

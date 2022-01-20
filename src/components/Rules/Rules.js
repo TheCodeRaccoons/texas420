@@ -4,10 +4,7 @@ import TextFileReader from '../utils/TextFileReader';
 import {Element} from 'react-scroll';
 
 class Rules extends React.Component {   
-    constructor(props) {
-        super(props); 
-    } 
-    
+
     componentDidMount = () => {
         window.scrollTo(0,0); 
         let width = document.documentElement.clientWidth;
