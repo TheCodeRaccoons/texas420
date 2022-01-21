@@ -265,7 +265,9 @@ html, body, body > div, .App {
   
   $parallax__layers: 4;
   
+  //Review sass compiller to see error with parallax
   @for $i from 0 through $parallax__layers {
+
     @if $i >= $parallax__layers - 1 {
       .parallax__layer__#{$i}{ 
         $x: math.div(($parallax--layers - $i),2)  ;
@@ -279,7 +281,7 @@ html, body, body > div, .App {
       }
     }
   }
-  
+
 }
 
 /*info sections*/

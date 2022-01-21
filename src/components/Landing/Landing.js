@@ -56,6 +56,7 @@ constructor(props){
         <div className="parallax__layer parallax__layer__3">
             <img src={bg1}  alt="bg section 1" />
         </div>  
+        
         <Element className="parallax__cover" name="welcome">
             <div className='welcome'>
                 <div className="title-section"> <div className="title">WELCOME TO TEXAS4z0 <br/><span className="subtitle">No KOS Server</span></div></div>
