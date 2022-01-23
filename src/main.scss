@@ -270,12 +270,12 @@ html, body, body > div, .App {
 
     @if $i >= $parallax__layers - 1 {
       .parallax__layer__#{$i}{ 
-        $x: math.div(($parallax--layers - $i),2)  ;
+        $x: math.div(($parallax--layers - $i), 2)  ;
        transform: translateZ(-100 * $x#{px}) translateY(10) scale($x + 1);
       }
     }
     @else{ 
-      $x: math.div(($parallax--layers - $i),2);
+      $x: math.div(($parallax--layers - $i), 2);
       .parallax__layer__#{$i}{
         transform: translateZ(-100 * $x#{px}) scale($x + 1);
       }
