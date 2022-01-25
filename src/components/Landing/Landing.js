@@ -18,9 +18,9 @@ constructor(props){
     }
     scrollTo() {
         scroller.scrollTo('scroll-to-element', {
-          duration: 800,
-          delay: 0,
-          smooth: 'easeInOutQuart'
+            duration: 800,
+            delay: 0,
+            smooth: 'easeInOutQuart'
         })
     }
     scrollToTop() {
@@ -32,7 +32,6 @@ constructor(props){
         window.scrollTo(0,0); 
         let width = document.documentElement.clientWidth;
         this.setState({isMobile: (width < 600)}) 
-    
     }
     
     componentWillUnmount  = () => {
@@ -43,19 +42,13 @@ constructor(props){
 
     render(){
         return (
-        <Element id="containerElement" className="parallax">  
-         <div className="parallax__layer parallax__layer__0">
-            <img src={bg4} alt="bg section 4"/>
-        </div>
-        <div className="parallax__layer parallax__layer__1">
-            <img src={bg3}  alt="bg section 3"/>
-        </div>
-        <div className="parallax__layer parallax__layer__2">
-            <img src={bg2}   alt="bg section 2"/>
-        </div>
-        <div className="parallax__layer parallax__layer__3">
-            <img src={bg1}  alt="bg section 1" />
-        </div>  
+        <Element id="containerElement" className="parallax">
+            <header>
+                <img className='parallax__0' src={bg4} alt="bg section 4"/>  
+                <img className='parallax__1'src={bg3} alt="bg section 3"/>  
+                <img className='parallax__2'src={bg2} alt="bg section 2"/>  
+                <img className='parallax__3'src={bg1} alt="bg section 1" /> 
+            </header>
         
         <Element className="parallax__cover" name="welcome">
             <div className='welcome'>

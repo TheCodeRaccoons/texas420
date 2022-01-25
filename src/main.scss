@@ -226,7 +226,7 @@ html, body, body > div, .App {
 
 /*Home parallax section*/
   .parallax {
-    perspective: 100px;
+    perspective: 10px;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
@@ -256,32 +256,44 @@ html, body, body > div, .App {
     background: #2D112B;
     display: block;
     position: relative;
-    top: 100%;
+    top: 0;
     left: 0;
     right: 0;
-    height: 50%;
+    height: auto;
     z-index: 2;
   }
   
-  $parallax__layers: 4;
-  
-  //Review sass compiller to see error with parallax
-  @for $i from 0 through $parallax__layers {
-
-    @if $i >= $parallax__layers - 1 {
-      .parallax__layer__#{$i}{ 
-        $x: math.div(($parallax--layers - $i), 2)  ;
-       transform: translateZ(-100 * $x#{px}) translateY(10) scale($x + 1);
-      }
-    }
-    @else{ 
-      $x: math.div(($parallax--layers - $i), 2);
-      .parallax__layer__#{$i}{
-        transform: translateZ(-100 * $x#{px}) scale($x + 1);
-      }
-    }
+  header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
   }
 
+  .parallax__0,.parallax__1,
+  .parallax__2,.parallax__3{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .parallax__0{
+    transform: translateZ(-25px) scale(3.5);
+  }
+  .parallax__1{
+    transform: translateZ(-20px) scale(3);
+  }
+  .parallax__2{
+    transform: translateZ(-10px) scale(2);
+  }
+  .parallax__3{
+    transform: translateZ(10) scale(0);
+  } 
 }
 
 /*info sections*/
@@ -320,8 +332,7 @@ html, body, body > div, .App {
     } 
   }
 
-  .Rules{
-    margin-top: 150vh;
+  .Rules{ 
     width: 100vw;
     height: auto;
     background-image: linear-gradient(to bottom, #000000, #28140f);
@@ -330,6 +341,7 @@ html, body, body > div, .App {
     padding-bottom: 50px;
     position: relative;
     font-size: 1em;
+    z-index: 10;
     h1{
       margin-top:0px;
       font-family: rust-title;
