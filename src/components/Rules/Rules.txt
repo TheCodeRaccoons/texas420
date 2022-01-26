@@ -1,49 +1,67 @@
-##Teams & Alliances
-- The max team size is 4. There is no limit to how many teams may ally with one another.
-- Within each base/compound may only exist 1 team (we count by beds).
+Do not try to find loop holes in the rules, if you do this you will be banned. If you have a question or need clarification on any rules open a ticket in discord, do not just assume.
 
 ##No KOS (Kill on Sight)
-KOS is only allowed in selected PvP zones
+- All PVP must happen inside a PVP zone.
+
 
 ##PvP / KOS Zones
-Airdrops    | Quarries (All) 
-Airfield    | Satellite 
-Cargo Ship  | Sewer Branch 
-Excavator   | Train Yard
-Harbors     | Water Treatment
-Launch Site | Attack Helicopter
-Military Tunnels | Crash sites
-Oil Rig	    | Locked Crates
-Power Plant	| Raids / Counter raids 
+Airdrops (one square out in all directions when it has touched the ground)    | Satellite 
+Airfield (inside monument walls)   | Sewer Branch 
+Cargo Ship  | Train Yard 
+Excavator   | Water Treatment
+Harbors     | Attack Helicopter(one square out in all directions)
+Underwater Labs (surounding squares) | Crash sites
+Military Tunnels | Locked Crates (one square out in all directions)
+Oil Rigs (one square out in all directions)	    | Raids (one square out in all directions)
+Power Plant	| Counter raids 
+Underwater Labs (one square out in all directions)	| Abandoned Military Base (one square out in all directions)
+Launch Site (inside monument walls, unless Bradley Crash Site then one square out in all directions of the crash site marker, just like Attack Heli) |
+
+- Dome and Junkyard are non PVP monuments, however if there is a locked crate dropped it becomes a PVP zone.
 - In the event of a crate or box, the PvP ends as soon as its contents have been collected and the person has left the area (1 square surrounding airdrop in all directions).
 - An easy way to tell if the crate has been collected is to open the map (press G) and check if the icon is still there. 
 - PvP for Attack Helicopter crates stops when the explosion marker has disappeared on the map.
 - Puzzle monuments: KOS areas include any square that has part of the monument in it.
-- Quarries: KOS area is only inside the quarry, not the whole square.
 ##Raids
-__DOs
-- If you are online raiding, you can kill the occupants of the base.
-- Occupants of the base can also kill you.
-- Anyone can come and counter raid you and steal your supplies.
-- You can be attacked while in the raided base, while trying to leave the raided base, or immediate area with the loot. 
-- People can camp outside and follow you back to your base. You are not safe until you are inside your own base.
-__DON'Ts
-- Do not raid within the first 24 hours of the wipe.
-- Do not raid noob bases, if it is still thatch/twig leave it alone. If someone has a starter base and did not lock their doors leave them alone or inform them in chat.
-- Helis are NOT raid material, do not use them to crash into a player's base.
-- Do not lure attack heli in to destroy another player's base.
-- Locking players out of their base once the raid is over. If you put down doors/locks, leave a note with the new code OR remove the locks/leave unlocked. *** This includes stealing bases***
-- Locking the TC. If you place a new TC it must be unlocked. Do not wall off TC
-- Foundation wiping
-- Walling off player's bags or leaving your own placed bag in the raided base.
-- No door camping with no raiding supplies; you are not raiding, you are just being a jerk. 
-- No trap bases (fake bases you are not living in, made to lure/kill other players). You may have traps in your own base! As long as it's within base walls / high external walls it is fine.
+- Do NOT raid within the first 24 hours of the wipe.
+- Weight class is based on locks. If you are a team of 2, 3, or 4 you must have code locks on your base/shop. If you have a code lock you can only raid/counter raid other code lock bases/shops. If you are a solo and want to be solo protected you must have a key lock on your base/shop. If you have a key lock you can only raid/counter raid other key lock bases/shops. If you are a solo and want to raid/counter raid more than key locks you must have a code lock, but that means anyone else with a code lock can then raid you. There will be no switching back and forth with locks. If you start code you stay code, if you start solo you can move to code but can't move back down for the remainder of the wipe.
+- Raids/Counter Raids can only be done with your base team (players living in your base). We cannot control who counters a raid but you cannot go counter with people outside your base team. This also applies to transporting peple to and from raids/counter raids. If you want to do monuments (ex: oil rig) with allies that is allowed as long as it is no more than 4 players.
+- Killing on sight is appropriate if the intent is there for the destruction to begin (i.e you have rockets / c4 / satchels and will place them on the door wall immediately following the kill).
+- Be aware that anyone can come and counter raid you and steal your supplies.
+- You are fair game while in the raided base, while trying to leave the raided base, or immediate area with the loot. You are **NOT** safe until you are inside your own base.
+- People can and often will camp outside in order to wait for you leave with the raided items and can follow you back to your base.
+- Do not invite or allow your allies to "watch" your raids as an audience. Raids can only be a 4 man event, if you are allowing a player to watch your raid they are considered an ally and count as part of your team size.
+- Do not lock players out of their base once the raid is over. (If you put down doors/locks unlock them once the raid is over.)
+- Do not take over bases.
+- Do not lock the TC. If you place a new TC leave it unlocked once the raid is over. Do not wall off TC.
+- No foundation wiping.
+- Do not wall off player's bags or leave your own placed bag in the raided base.
+##Door Camping
+- No door camping and make claims that you are "raiding". If you are door camping with no raiding supplies, you are not raiding, you are just being a jerk.
+##Trap Bases
+- Trap bases are NOT allowed.
+- You may have traps within your own base/external walls. Traps are not allowed to shoot outside of external walls. This includes turrets set to peacekeeper.
+- Do not place landmines and beartraps outside of your own base / external walls.
 ##SAMS Sites
-All SAMS Sites must be labeled on the map with a vending machine. Ex: SAMS Site! No Fly Zone!
+- If you place down a SAM Site, you must label it with a vending machine and broadcast the location on the map. (Ex: SAM Site! No Fly Zone)
+- SAM Sites vending machines must be empty (RED).
 ##Be respectful! This is a NOOB server.
+- NO slurs of any kind. (voice, general/team chat, signs, etc.)
 - Have respect for all players, if you are being toxic and we have proof you will be muted, kicked, or banned.
-- Do not place any traps/land mines out in the open. All things that can hurt/kill have to be within your own high walls/base.
+- Walling off monuments is prohibited. We want everyone to be able to learn on this server so we want everything available to them to try.
+- You may build bridges in the water but they must have a pass through area for boats.
+##Teams
+- Max team size is 4. No exceptions!
+- Within each base/compound there can only be 4 players authorized on TC, locks and have bags in the base.
+- Allies must live at least one square away in all directions from each other. (That means to have a full grid square between the two bases.)
+- If you want to help someone on oil rig, cargo or any monument you must create a new team and there can only be 4 people in the team.
+- No tag teaming people on raids/counter raids.
 ##Stealing
-- If someone catches you stealing THEIR things they are allowed to kill you. This can include furnance materials, helis, horses, cars (keep them locked!) or things out of a recycler they're using.
-- If you walk into someone's base or compound uninvited they CAN kill you.
-**ONLY Admins can speak with authority, do not make claims for admins based on that authority. Basically, do not speak for us, we will make the decisions on actions needed to be taken. We understand this is Rust but it is a learning/chill server. BE NICE sometimes!
+- If someone catches you stealing THEIR things they are allowed to kill you. This can include furnance materials, planter boxes, helis, horses, cars (keep them locked!) or things out of a recycler they're using.
+- If you are caught stealing, you are NOT allowed to shoot back at the person that you are stealing from. (This rule is in place to avoid people from baiting PvP situations.)
+- If you walk into someone's base or compound uninvited, again, they can kill you.
+##NoobTown/General
+- NoobTown is for shops only, no compounds or bases with shooting floors/heli towers are allowed because of the ally rule. You may build and live out of your shop.
+- Raiding admin built Noob Center is strictly prohibited.
+- ONLY Admins can speak with authority, do not make claims for admins based on that authority. Basically, do not speak for us, we will make the decisions on actions needed to be taken.
+- We understand this is Rust but it is a learning/chill server. BE NICE!
