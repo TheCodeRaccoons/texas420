@@ -1,5 +1,5 @@
 import React from "react";
-import ReactHtmlParser from 'react-html-parser'; 
+import parse from 'html-react-parser'; 
 
 //const LinksRegex = "\\[(.*?)\\]\\((.*?)\\)";
 const TitlesRegex = /##(.*$)/gm;
@@ -61,7 +61,7 @@ class TextFileReader extends React.Component {
 				
 			} 
 			//console.log(table)
-		return ReactHtmlParser (text);
+		return parse(text);
 	}
 
 
