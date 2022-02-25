@@ -25,8 +25,16 @@ class App extends Component {
       showCal: !this.state.showCal
     })
   }
-
-  render(){
+  
+  HighlightNav = (clss) => {
+    if(clss !== this.state.activeMenu){ 
+      this.setState({
+        activeMenu: clss
+      })
+    }
+  }
+  
+  render(){ 
     return (
       <div className="App" >  
         <Navigation navClass={this.state.activeMenu} />
@@ -40,7 +48,7 @@ class App extends Component {
           <span className="closeTab" onClick={this.showCalendar} >X</span>
           <iframe title="Google cal" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;ctz=America%2FChicago&amp;src=YXBtNGRkaDl2cTlnazlwZjM0aGdnMWVrZThAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%233F51B5&amp;color=%230B8043"   width="350" height="500" frameBorder="0" scrolling="no"></iframe>
         </div> 
-          <Landing/>  
+          <Landing  onUpdateMenu={this.HighlightNav}/>  
       </div>
     );
   }

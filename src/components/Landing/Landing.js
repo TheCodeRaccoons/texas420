@@ -27,12 +27,12 @@ constructor(props){
     scrollToTop() {
         scroll.scrollToTop();
     } 
-
+ 
     componentDidMount = () => {
-        window.addEventListener('scroll', this.handleScroll);  
+        window.addEventListener('scroll', this.handleScroll);
         window.scrollTo(0,0); 
         let width = document.documentElement.clientWidth;
-        this.setState({isMobile: (width < 600)}) 
+        this.setState({isMobile: (width < 600)})  
     }
     
     componentWillUnmount  = () => {
@@ -41,9 +41,17 @@ constructor(props){
         Events.scrollEvent.remove('end');
     }  
 
+    handleScroll = (e) => { 
+        if (e.target.scrollTop > 350 || e.target.scrollTop > 350) {
+            this.props.onUpdateMenu("sideNav visible-nav") 
+        } else {
+            this.props.onUpdateMenu("sideNav") 
+        }
+    }
+
     render(){
         return (
-        <Element id="containerElement" className="parallax">
+        <Element id="containerElement" className="parallax" onScroll={this.handleScroll}>
             <div className='parallax-section'>
                 <img className='parallax__0' src={bg4} alt="bg section 4"/>  
                 <img className='parallax__1' src={bg3} alt="bg section 3"/>  
