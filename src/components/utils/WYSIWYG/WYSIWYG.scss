@@ -1,0 +1,134 @@
+$color-primary: #ebf7ff;
+$color-secondary: #EB743C;
+$scroll-primary: #1A252D;
+$scroll-secondary: #4a4172;
+$color-background-v: #1A252D;
+$font-primary: #ebf7ff;
+$font-accent: #EB743C;
+$font-accent-2: #8b423b;
+$font-accent-3: #5a2b27;
+$accent-transparent: rgba(26, 37, 45,0.75);
+
+/*Fonts*/ 
+@font-face {
+    font-family: rust-title;
+    src: url(../../../media/Fonts/Rust.ttf);
+}
+@font-face {
+    font-family: roboto;
+    src: url(../../../media/Fonts/Roboto-Regular.ttf);
+} 
+@font-face {
+    font-family: roboto-thin;
+    src: url(../../../media/Fonts/Roboto-Thin.ttf);
+}
+
+.editor-container{
+    width: 95vw;
+    height: 100vh;
+    overflow: hidden; 
+    margin: auto;
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    font-size: 1em;
+    .left-col{
+        width: 30%;
+    }
+    .right-col{
+        width: 68%;    
+        overflow: hidden;
+        overflow-y: scroll;
+        max-height: 80%;
+    }
+
+    .editor{
+        width: 100%;
+        height: 100%;
+    } 
+    .ace_editor {
+        width: 100% !important;
+        height: 80% !important;
+    }
+
+    .markdown-body{
+        color: $color-primary;
+        text-align: left;
+        font-family: roboto;
+        font-size: 1vw;     
+        margin: 0 10px;
+        -webkit-font-smoothing: antialiased;
+        //Titles
+        h1,h2,h3,h4,h5{ 
+            font-family: rust-title;
+            color: $color-secondary;
+            text-align: left;
+        }
+        h1{ 
+            font-family: rust-title;
+            text-align: center;
+            font-size: 3em;
+            padding-bottom: 25px;
+            padding-top:25px;
+            color: $font-primary;
+        }
+        h2{
+            font-family: rust-title;
+            font-size: 1.25em;
+            padding-bottom: 15px;
+            padding-top: 15px;
+            color: $font-accent;
+        } 
+        h3{
+            font-family: rust-title; 
+            font-size: 1.5em;
+            padding-bottom: 15px;
+            padding-top: 15px;
+            color: $font-accent;
+        }
+        
+        //Text
+   
+
+        ul{
+            padding-left: 50px;
+            li{    
+                margin: 25px;
+            } 
+        }
+        .important{
+            text-decoration: underline;
+            color: $font-accent-2;
+            font-size: 1.15em; 
+            font-weight: bold;
+        }
+        table{
+            width: 80%;
+            font-weight: bold;
+            padding-left: 50px;
+            tbody>tr>td{  
+                width: 50%;
+                color: $font-accent-2;
+                border-bottom: 1px solid $font-accent-3;
+                padding: 8px
+            }
+        }
+        strong{
+            color: $font-accent-3;
+            font-weight: 900;
+        }
+        blockquote{
+            padding: 15px;
+            font-size: 14px;
+            font-weight: 100; 
+            width: 90%;
+            background-color: $accent-transparent;
+            border-radius: 6px;
+            p{
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+} 
