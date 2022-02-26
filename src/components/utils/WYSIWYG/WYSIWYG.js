@@ -15,7 +15,8 @@ class Wysiwyg extends React.Component {
         this.state = {
             markdown_txt: "initText",
             markdown_processed: "initText",
-            is_editor_shown: true
+            is_editor_shown: true,
+            rule_obj: ""
         }
     } 
 
@@ -28,28 +29,32 @@ class Wysiwyg extends React.Component {
     fetchData = () => {
         const query = '*[_type == "rules"]'
         client.fetch(query)
-        .then((data) => {
-            console.log(data[0]) 
-            this.setupEditor(data[0].rules)
+        .then((data) => { 
+            this.setupEditor(data[0].rules, data)
+            console.log(data)
         })
     }
 
-    translateFromSanity(rules) {
+    translateFromSanity = (rules) => {
         let fullText = ""
         rules.forEach(element => {
             fullText += element.children[0].text + "\n"
-        });
-        console.log(fullText)
+        }); 
         return fullText
     }
 
+    translateToSanity = () => { 
+        const textBlocks = this.state.markdown_txt.split("\n") 
+        this.onUpdateRules(textBlocks)
+    }
 
-    setupEditor(markdown) {
+    setupEditor(markdown, data) {
         let sanityImp = this.translateFromSanity(markdown)
         let md = marked(sanityImp)  
         this.setState({
             markdown_txt: sanityImp,
-            markdown_processed: md
+            markdown_processed: md,
+            rule_obj: data
                     })
     }
 
@@ -59,6 +64,40 @@ class Wysiwyg extends React.Component {
             markdown_txt: newMarkdown,
             markdown_processed: md
         })
+    } 
+
+    onUpdateRules = (_mutations) => {   
+        const modMutations = _mutations.map((val, i) => {
+            return({children:[{marks:[], text: val, _type: 'span',_key: (i+1)}], markDefs: [], style:"normal", _type: "block", _key: (Math.random() + 1).toString(36).substring(7) })
+        }) 
+        const mutations = {
+            mutations: [
+            {
+                patch: {
+                id: "826e0fea-c20c-45bb-92f0-b3c07368d0f9",
+                set: {
+                        rules: modMutations ,
+                },
+                },
+            },
+            ],
+        };
+
+        console.log(mutations)
+                
+
+        fetch(`https://${process.env.REACT_APP_SANITY_PROJECT_ID}.api.sanity.io/v${process.env.REACT_APP_SANITY_VERSION}/data/mutate/${process.env.REACT_APP_SANITY_DATASET}`, {
+            method: 'post',
+            headers: {
+                'Content-type': 'application/json',
+                Authorization: `Bearer ${process.env.REACT_APP_SANITY_TOKEN}`
+            },
+            body: JSON.stringify(mutations)
+        })
+            .then(response => response.json())
+            .then(result => console.log(result))
+            .catch(error => console.error(error))
+    
     }
 
     render() {
@@ -82,6 +121,7 @@ class Wysiwyg extends React.Component {
                 <div className="right-col">
                     <div className="markdown-body" dangerouslySetInnerHTML={{__html: this.state.markdown_processed}}></div>
                 </div> 
+                <button className='button-publish' onClick={this.translateToSanity}>submit</button>
         </div>
         ) 
     }
