@@ -21,8 +21,7 @@ class Wysiwyg extends React.Component {
     } 
 
     componentDidMount() { 
-        this.props.HighlightNav("sideNav visible-nav")
-        //TODO set the markdow from the API
+        this.props.HighlightNav("sideNav visible-nav") 
         this.fetchData();
     }
 
@@ -55,7 +54,7 @@ class Wysiwyg extends React.Component {
             markdown_txt: sanityImp,
             markdown_processed: md,
             rule_obj: data
-                    })
+        })
     }
 
     onEditorChange = (newMarkdown) => {  
@@ -76,16 +75,12 @@ class Wysiwyg extends React.Component {
                 patch: {
                 id: "826e0fea-c20c-45bb-92f0-b3c07368d0f9",
                 set: {
-                        rules: modMutations ,
+                    rules: modMutations,
                 },
                 },
             },
             ],
         };
-
-        console.log(mutations)
-                
-
         fetch(`https://${process.env.REACT_APP_SANITY_PROJECT_ID}.api.sanity.io/v${process.env.REACT_APP_SANITY_VERSION}/data/mutate/${process.env.REACT_APP_SANITY_DATASET}`, {
             method: 'post',
             headers: {
@@ -94,10 +89,9 @@ class Wysiwyg extends React.Component {
             },
             body: JSON.stringify(mutations)
         })
-            .then(response => response.json())
-            .then(result => console.log(result))
-            .catch(error => console.error(error))
-    
+        .then(response => response.json())
+        .then(result => console.log(result))
+        .catch(error => console.error(error))
     }
 
     render() {
