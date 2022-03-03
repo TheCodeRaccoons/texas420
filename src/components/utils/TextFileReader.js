@@ -1,5 +1,8 @@
 import React from "react";
 import parse from 'html-react-parser'; 
+import {marked} from 'marked'
+import {client } from '../../client';
+import '../utils/WYSIWYG/WYSIWYG.scss'
 
 //const LinksRegex = "\\[(.*?)\\]\\((.*?)\\)";
 const TitlesRegex = /##(.*$)/gm;
@@ -13,13 +16,42 @@ class TextFileReader extends React.Component {
 		super(props);
 
 		this.state = {
-			text: ""
+			text: "",
+            markdown_processed: "initText",
 		};
 	}
 
 	componentDidMount() {
-		this.readTextFile(this.props.txt);
+		//this.readTextFile(this.props.txt);
+        this.fetchData();
 	}
+
+    fetchData = () => {
+        const query = '*[_type == "rules"]'
+        client.fetch(query)
+        .then((data) => { 
+            this.setupEditor(data[0].rules, data)
+            console.log(data)
+        })
+    }
+
+    translateFromSanity = (rules) => {
+        let fullText = ""
+        rules.forEach(element => {
+            fullText += element.children[0].text + "\n"
+        }); 
+        return fullText
+    }
+
+    setupEditor(markdown, data) {
+        let sanityImp = this.translateFromSanity(markdown)
+        let md = marked(sanityImp)  
+        this.setState({
+            markdown_txt: sanityImp,
+            markdown_processed: md,
+            rule_obj: data
+        })
+    }
 
 
 	getPost = (text) => { 
@@ -64,8 +96,6 @@ class TextFileReader extends React.Component {
 		return parse(text);
 	}
 
-
-
 	readTextFile = file => {
 		var rawFile = new XMLHttpRequest();
 		rawFile.open("GET", file, false);
@@ -85,6 +115,7 @@ class TextFileReader extends React.Component {
 	render() {
 		return (
 			<div className="rules-data"> 
+			<div className="markdown-body" dangerouslySetInnerHTML={{__html: this.state.markdown_processed}}></div>
 				{this.getPost(this.state.text)}
 			</div>
 		);

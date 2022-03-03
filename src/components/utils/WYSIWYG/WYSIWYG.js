@@ -6,7 +6,7 @@ import AceEditor from 'react-ace'
 import "ace-builds/src-noconflict/mode-markdown";
 import "ace-builds/src-noconflict/theme-monokai";
 
-import { urlFor, client } from '../../../client';
+import { client } from '../../../client';
 
 class Wysiwyg extends React.Component {   
     constructor(props) {
@@ -34,17 +34,17 @@ class Wysiwyg extends React.Component {
         })
     }
 
+    translateToSanity = () => { 
+        const textBlocks = this.state.markdown_txt.split("\n") 
+        this.onUpdateRules(textBlocks)
+    }
+
     translateFromSanity = (rules) => {
         let fullText = ""
         rules.forEach(element => {
             fullText += element.children[0].text + "\n"
         }); 
         return fullText
-    }
-
-    translateToSanity = () => { 
-        const textBlocks = this.state.markdown_txt.split("\n") 
-        this.onUpdateRules(textBlocks)
     }
 
     setupEditor(markdown, data) {

@@ -330,38 +330,7 @@ html, body, body > div, .App {
       margin:auto; 
       z-index: 1;
       position: relative;
-      font-size: 1vw;
-      .title{ 
-        font-family: rust-title;
-        text-align: left;
-        font-size: 1.25em;
-        padding-bottom: 25px;
-        padding-top:25px;
-        color: $font-accent;
-      }
-      .info{ 
-        font-family: roboto; 
-        font-size: 1em; 
-        padding-bottom: 25px;
-      }
-      li{
-        padding-left: 50px;
-      }
-      .important{
-        text-decoration: underline;
-        color: $font-accent-2;
-        font-size: 1.15em; 
-        font-weight: bold;
-      }
-      table{
-        width: 80%;
-        font-weight: bold;
-        padding-left: 50px;
-        tbody>tr>td{  
-          width: 50%;
-          color: $font-accent-2;
-        }
-      }
+      font-size: 1vw; 
     }
 
   } 

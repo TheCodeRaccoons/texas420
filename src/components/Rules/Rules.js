@@ -16,8 +16,7 @@ class Rules extends React.Component {
     
     render(){
         return (
-        <Element className="Rules" name="Rules"> 
-            <h1>Rules</h1> 
+        <Element className="Rules" name="Rules">  
                 <div className="rules_img img_1"></div>  
                 <div className="rules_img img_2"></div>  
                 <div className="rules_img img_3"></div>   
