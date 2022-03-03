@@ -62,7 +62,8 @@ class Wysiwyg extends React.Component {
         let md = marked(newMarkdown)  
         this.setState({
             markdown_txt: newMarkdown,
-            markdown_processed: md
+            markdown_processed: md,
+            toggle_login: true
         })
     } 
 
