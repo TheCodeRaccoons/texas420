@@ -9,9 +9,12 @@ constructor(props){
         activeMenu: 'sideNav',
         showDisc: false,
         showCal: false
-    }
-
+    } 
 }  
+
+componentDidMount = () => {
+    this.props.HideNav(false)
+}
 showDiscord = () => {
     this.setState({
         showDisc: !this.state.showDisc

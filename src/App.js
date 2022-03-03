@@ -8,7 +8,6 @@ import PageNotFound from './components/404/404';
 import { BrowserRouter as Router, Route, Routes  } from "react-router-dom";
 
 class App extends Component {   
-
   constructor(props){
       super(props);  
       this.state = {
@@ -45,7 +44,6 @@ class App extends Component {
       </div>
     );
   }
-  
 }
 
 export default App;

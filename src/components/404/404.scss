@@ -1,0 +1,118 @@
+
+@font-face {
+    font-family: rust-title;
+    src: url(../../media/Fonts/Rust.ttf);
+  }
+  @font-face {
+    font-family: roboto;
+    src: url(../../media/Fonts/Roboto-Regular.ttf);
+  } 
+  @font-face {
+    font-family: roboto-thin;
+    src: url(../../media/Fonts/Roboto-Thin.ttf);
+  } 
+$seed: #383838;
+/*Color Palette*/
+$color-primary: #ebf7ff;
+$color-secondary: #EB743C;
+$scroll-primary: #1A252D;
+$scroll-secondary: #4a4172;
+$color-background-v: #1A252D;
+$font-primary: #ebf7ff;
+$font-accent: #EB743C;
+$font-accent-2: #8b423b;
+$font-accent-3: #5a2b27;
+$sm: 1rem;
+$md: 2.5rem;
+$lg: 4rem;
+ 
+.pnfContainer {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  width: calc(100% - #{$lg});
+  margin: 0 auto;
+  > * {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    width: 100%;
+    padding: $md;
+  }
+  aside {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4424790/right-edges.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 25px 100%;
+    width: 50%;
+    max-width: 500px;
+    img {
+      display: block;
+      height: auto;
+      width: 80%;
+    }
+  }
+  
+  main {
+    text-align: left;
+    background: $seed;
+    width: 50%;
+    flex:1;
+    display: flex;
+    align-items: flex-start !important;
+    color: $color-primary;
+    h1 {
+      font-family: rust-title;
+      font-size: $lg;
+      color: $font-accent;
+      margin-bottom: $sm;
+    }
+    p {
+      margin-bottom: $md;
+      em { 
+        color: $font-accent;
+      }
+    }
+    button {
+      font-family: roboto;
+      font-size: $sm;
+      color: $font-primary;
+      border: none;
+      background-color: $font-accent-2;
+      padding: $sm $md;
+      transform: skew(-5deg);
+      transition: all 0.1s ease;
+      &:hover {
+        background-color: $font-accent;
+        transform: scale(1.15);
+      }
+    }
+  }
+}
+
+
+@media (max-width: 700px) {
+    .pnfContainer {
+        body {
+            background: $seed;
+            font-size: 16px;
+        }
+        div {
+            flex-flow: column;
+            > * {
+            max-width: 700px;
+            height: 100%;
+            }
+        }
+        aside {
+            background-image: none;
+            background-color: white;
+            img {
+            max-width: 300px;
+            }
+        }
+    }
+}
