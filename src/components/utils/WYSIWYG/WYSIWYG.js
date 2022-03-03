@@ -17,7 +17,8 @@ class Wysiwyg extends React.Component {
             markdown_txt: "initText",
             markdown_processed: "initText",
             is_editor_shown: true,
-            rule_obj: ""
+            rule_obj: "",
+            is_logged_in: false
         }
     } 
 
@@ -25,6 +26,13 @@ class Wysiwyg extends React.Component {
         this.props.HighlightNav("sideNav visible-nav") 
         this.fetchData();
     }
+
+    onLogin = () => {
+        this.setState({
+            is_logged_in: true
+        })
+    }
+
 
     fetchData = () => {
         const query = '*[_type == "rules"]'
@@ -99,7 +107,7 @@ class Wysiwyg extends React.Component {
     render() {
         return(
             <React.Fragment>
-                <Login />
+                <Login onLogin={this.onLogin} />
                 <div className="editor-container">   
                     <div className="left-col">
                         <div className="editor" id="editor">
