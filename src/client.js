@@ -12,3 +12,9 @@ export const client = sanityClient({
 const builder = imageUrlBuilder(client)
 
 export const urlFor = (source) => builder.image(source) 
+
+export const credentials = ({
+        usernameFog:process.env.REACT_APP_LOGIN_CRED_FOG,
+        usernameClover:process.env.REACT_APP_LOGIN_CRED_CLOVER,
+        pw:process.env.REACT_APP_LOGIN_PW
+    })

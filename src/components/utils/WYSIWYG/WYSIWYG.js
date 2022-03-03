@@ -18,7 +18,8 @@ class Wysiwyg extends React.Component {
             markdown_processed: "initText",
             is_editor_shown: true,
             rule_obj: "",
-            is_logged_in: false
+            is_logged_in: false,
+            loggedAs: "",
         }
     } 
 
@@ -32,8 +33,7 @@ class Wysiwyg extends React.Component {
             is_logged_in: true
         })
     }
-
-
+ 
     fetchData = () => {
         const query = '*[_type == "rules"]'
         client.fetch(query)
@@ -107,7 +107,7 @@ class Wysiwyg extends React.Component {
     render() {
         return(
             <React.Fragment>
-                <Login onLogin={this.onLogin} />
+                {(!this.state.is_logged_in) ? <Login onLogin={this.onLogin} /> : ""}
                 <div className="editor-container">   
                     <div className="left-col">
                         <div className="editor" id="editor">
