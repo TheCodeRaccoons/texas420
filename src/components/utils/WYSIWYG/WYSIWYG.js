@@ -2,6 +2,7 @@ import React from 'react';
 import './WYSIWYG.scss' 
 import {marked} from 'marked'
 import AceEditor from 'react-ace'
+import Login from '../../Login/Login'
 
 import "ace-builds/src-noconflict/mode-markdown";
 import "ace-builds/src-noconflict/theme-monokai";
@@ -96,27 +97,30 @@ class Wysiwyg extends React.Component {
 
     render() {
         return(
-            <div className="editor-container">   
-                <div className="left-col">
-                    <div className="editor" id="editor">
-                        <AceEditor
-                            value={this.state.markdown_txt}
-                            mode="markdown"
-                            theme="monokai"
-                            onChange={this.onEditorChange}
-                            name="editor-ace"
-                            showGutter={false}
-                            showPrintMargin={false}
-                            wrapEnabled={true}
-                            editorProps={{ $blockScrolling: true }}
-                        /> 
+            <React.Fragment>
+                <Login />
+                <div className="editor-container">   
+                    <div className="left-col">
+                        <div className="editor" id="editor">
+                            <AceEditor
+                                value={this.state.markdown_txt}
+                                mode="markdown"
+                                theme="monokai"
+                                onChange={this.onEditorChange}
+                                name="editor-ace"
+                                showGutter={false}
+                                showPrintMargin={false}
+                                wrapEnabled={true}
+                                editorProps={{ $blockScrolling: true }}
+                            /> 
+                        </div>
                     </div>
-                </div>
-                <div className="right-col">
-                    <div className="markdown-body" dangerouslySetInnerHTML={{__html: this.state.markdown_processed}}></div>
-                </div> 
-                <button className='button-publish' onClick={this.translateToSanity}>submit</button>
-        </div>
+                    <div className="right-col">
+                        <div className="markdown-body" dangerouslySetInnerHTML={{__html: this.state.markdown_processed}}></div>
+                    </div> 
+                    <button className='button-publish' onClick={this.translateToSanity}>submit</button>
+            </div>
+        </React.Fragment>
         ) 
     }
 }

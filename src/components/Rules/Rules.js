@@ -2,7 +2,6 @@ import React from 'react';
 import text from './Rules.txt'
 import TextFileReader from '../utils/TextFileReader';
 import {Element} from 'react-scroll';
-
 class Rules extends React.Component {   
 
     componentDidMount = () => {
@@ -16,13 +15,13 @@ class Rules extends React.Component {
     
     render(){
         return (
-        <Element className="Rules" name="Rules">  
-                <div className="rules_img img_1"></div>  
-                <div className="rules_img img_2"></div>  
-                <div className="rules_img img_3"></div>   
-                <div className="rules_img img_4"></div>   
-            <TextFileReader  txt={text} /> 
-        </Element>
+            <Element className="Rules" name="Rules">  
+                    <div className="rules_img img_1"></div>  
+                    <div className="rules_img img_2"></div>  
+                    <div className="rules_img img_3"></div>   
+                    <div className="rules_img img_4"></div>   
+                <TextFileReader  txt={text} /> 
+            </Element>  
         )
     }
 }
