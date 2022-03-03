@@ -26,6 +26,7 @@ class Wysiwyg extends React.Component {
     componentDidMount() { 
         this.props.HighlightNav("sideNav visible-nav") 
         this.fetchData();
+        this.props.HideNav(true);
     }
 
     onLogin = () => {
@@ -107,8 +108,8 @@ class Wysiwyg extends React.Component {
     render() {
         return(
             <React.Fragment>
-                {(!this.state.is_logged_in) ? <Login onLogin={this.onLogin} /> : ""}
-                <div className="editor-container">   
+                {(!this.state.is_logged_in) ? <Login onLogin={this.onLogin} /> : (
+                    <div className="editor-container">   
                     <div className="left-col">
                         <div className="editor" id="editor">
                             <AceEditor
@@ -128,7 +129,10 @@ class Wysiwyg extends React.Component {
                         <div className="markdown-body" dangerouslySetInnerHTML={{__html: this.state.markdown_processed}}></div>
                     </div> 
                     <button className='button-publish' onClick={this.translateToSanity}>submit</button>
-            </div>
+                </div>
+
+                )}
+                
         </React.Fragment>
         ) 
     }
