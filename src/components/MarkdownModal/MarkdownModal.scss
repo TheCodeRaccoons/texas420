@@ -10,7 +10,6 @@ $font-accent: #EB743C;
 $font-accent-2: #8b423b;
 $font-accent-3: #5a2b27;
 
-
 .md-button{
     padding: 0;
     background: #EB743C;
@@ -38,9 +37,35 @@ $font-accent-3: #5a2b27;
     top: 0;
     right: 0;
     z-index: 1;
-  }
-  
-  /* Show the tooltip text when you mouse over the tooltip container */
-  .md-button:hover .tooltiptext {
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.md-button:hover .tooltiptext {
     visibility: visible;
-  }
+}
+
+.modal-container{
+    position: absolute;
+    right: 0;
+    top:0;
+    width: 700px;
+    height: 100vh;
+    z-index: 10;
+    background-color: rgba($color: $scroll-primary, $alpha: 0.75);
+    overflow-x: hiddem;
+    overflow-y: scroll;
+    .modal-body{
+        margin: 25px;
+        padding: 25px;
+        color: white;
+        text-align: left;
+        background-color: $scroll-primary;
+        span{
+            cursor: pointer;
+        }
+
+        h3{
+            padding-top: 25px;
+        }
+    }
+}

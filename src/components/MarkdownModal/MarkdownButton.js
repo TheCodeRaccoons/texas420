@@ -2,13 +2,13 @@ import React from 'react'
 import md_icon from '../../media/Icons/markdown-icon.png'
 import './MarkdownModal.scss'
 
-const MarkdownButton = () => {
+const MarkdownButton = (props) => {
 
     return(
         <React.Fragment> 
-            <div className='md-button'>
+            <div className='md-button' onClick={ () => props.onToggleModal(true) }>
                 <img src={md_icon} alt='md-icon' />
-                <span class="tooltiptext">Display editor's Markdown</span>
+                <span className="tooltiptext">Display editor's Markdown</span>
             </div>
         </React.Fragment>
     )

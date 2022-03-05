@@ -4,6 +4,7 @@ import {marked} from 'marked'
 import AceEditor from 'react-ace'
 import Login from '../../Login/Login'
 import MarkdownButton from '../../MarkdownModal/MarkdownButton';
+import MarkdownModal from '../../MarkdownModal/MarkdownModal';
 import "ace-builds/src-noconflict/mode-markdown";
 import "ace-builds/src-noconflict/theme-monokai";
 
@@ -20,6 +21,7 @@ class Wysiwyg extends React.Component {
             rule_obj: "",
             is_logged_in: false,
             loggedAs: "",
+            modalToggle: false
         }
     } 
 
@@ -34,7 +36,13 @@ class Wysiwyg extends React.Component {
             is_logged_in: true
         })
     }
- 
+    
+    onToggleModal = (toggle) => {
+        this.setState({ 
+            modalToggle: toggle
+        })
+    }
+
     fetchData = () => {
         const query = '*[_type == "rules"]'
         client.fetch(query)
@@ -108,7 +116,7 @@ class Wysiwyg extends React.Component {
     render() {
         return(
             <React.Fragment>
-                <MarkdownButton />
+                <MarkdownButton  onToggleModal={this.onToggleModal} />
                 {(!this.state.is_logged_in) ? <Login onLogin={this.onLogin} /> : (
                     <div className="editor-container">   
                     <div className="left-col">
@@ -130,6 +138,7 @@ class Wysiwyg extends React.Component {
                         <div className="markdown-body" dangerouslySetInnerHTML={{__html: this.state.markdown_processed}}></div>
                     </div> 
                     <button className='button-publish' onClick={this.translateToSanity}>submit</button>
+                    {this.state.modalToggle ? <MarkdownModal onToggleModal={this.onToggleModal} /> : ""}
                 </div>
 
                 )}
