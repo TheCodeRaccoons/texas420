@@ -6,7 +6,7 @@ const PageNotFound = (props) =>{
     
     useEffect(() => {
         props.HideNav(true);
-      },[]);
+      },[props]);
 
     const navigate = useNavigate();
     const handleOnClick = useCallback(() => navigate('/', {replace: true}), [navigate]);

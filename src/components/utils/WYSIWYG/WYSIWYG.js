@@ -3,7 +3,7 @@ import './WYSIWYG.scss'
 import {marked} from 'marked'
 import AceEditor from 'react-ace'
 import Login from '../../Login/Login'
-
+import MarkdownButton from '../../MarkdownModal/MarkdownButton';
 import "ace-builds/src-noconflict/mode-markdown";
 import "ace-builds/src-noconflict/theme-monokai";
 
@@ -108,6 +108,7 @@ class Wysiwyg extends React.Component {
     render() {
         return(
             <React.Fragment>
+                <MarkdownButton />
                 {(!this.state.is_logged_in) ? <Login onLogin={this.onLogin} /> : (
                     <div className="editor-container">   
                     <div className="left-col">

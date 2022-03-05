@@ -1,0 +1,46 @@
+
+/*Color Palette*/
+$color-primary: #ebf7ff;
+$color-secondary: #EB743C;
+$scroll-primary: #1A252D;
+$scroll-secondary: #4a4172;
+$color-background-v: #1A252D;
+$font-primary: #ebf7ff;
+$font-accent: #EB743C;
+$font-accent-2: #8b423b;
+$font-accent-3: #5a2b27;
+
+
+.md-button{
+    padding: 0;
+    background: #EB743C;
+    width: 50px;
+    position: absolute;
+    right: 0;
+    top: 25px;
+    cursor: pointer;
+}
+.md-button img{
+    width: 100%
+}
+
+  /* Tooltip text */
+.md-button .tooltiptext {
+    visibility: hidden; 
+    width: 160px;
+    background-color: $color-background-v;
+    color: #fff;
+    text-align: left;
+    padding: 6px;
+    margin-right: 55px !important;
+    border-radius: 6px;
+    position: absolute; 
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .md-button:hover .tooltiptext {
+    visibility: visible;
+  }
