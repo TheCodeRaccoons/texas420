@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.86ed5ade.css",
+    "main.js": "/static/js/main.06b01cf5.js",
+    "static/media/LoginBG.png": "/static/media/LoginBG.22b975701c943de2bbbb.png",
+    "static/media/RustLighthouse02-01.svg": "/static/media/RustLighthouse02-01.5c97e6fbc80791b410bb222b626f19d7.svg",
+    "static/media/Roboto-Regular.ttf": "/static/media/Roboto-Regular.f25bd05915c1a3468d3d.ttf",
+    "static/media/RustAdornmentWindmill.svg": "/static/media/RustAdornmentWindmill.86acb22a566995738033.svg",
+    "static/media/Roboto-Thin.ttf": "/static/media/Roboto-Thin.7cc2944f187ea510b4c7.ttf",
+    "static/media/RustAdornmentRecycler.svg": "/static/media/RustAdornmentRecycler.39528ab95a7f3ee98bbd.svg",
+    "static/media/RustAdornment1.svg": "/static/media/RustAdornment1.fb7e6fc41c7ac9ef0aaf.svg",
+    "static/media/RustAdornmentHorse.svg": "/static/media/RustAdornmentHorse.50191520a7b8db49baa6.svg",
+    "static/media/RustAdornmentDome.svg": "/static/media/RustAdornmentDome.0182be8afe392cc3c8dc1d2251abc757.svg",
+    "static/media/calendar.png": "/static/media/calendar.6e36a648cffa1ce89a0c.png",
+    "static/media/LineBar.svg": "/static/media/LineBar.9e70253075bdf0194cbf.svg",
+    "static/media/Rust.ttf": "/static/media/Rust.434513ba46d289ec7ddc.ttf",
+    "static/media/Rules.txt": "/static/media/Rules.880f80b8c42b15241fe0.txt",
+    "static/media/RustLighthouse04-01.svg": "/static/media/RustLighthouse04-01.6bb9f93c9541f05b89c81df8d5a682a8.svg",
+    "static/media/RustLighthouse01-01.svg": "/static/media/RustLighthouse01-01.bae9dfd394e4851f253f5cbcbd465608.svg",
+    "static/media/RustLighthouse03-01.svg": "/static/media/RustLighthouse03-01.a17aa8606bb8e9f7a10c6a55db3383b3.svg",
+    "index.html": "/index.html",
+    "main.86ed5ade.css.map": "/static/css/main.86ed5ade.css.map",
+    "main.06b01cf5.js.map": "/static/js/main.06b01cf5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.86ed5ade.css",
+    "static/js/main.06b01cf5.js"
+  ]
+}
