@@ -5,6 +5,7 @@ import AceEditor from 'react-ace'
 import Login from '../../Login/Login'
 import MarkdownButton from '../../MarkdownModal/MarkdownButton';
 import MarkdownModal from '../../MarkdownModal/MarkdownModal';
+import ModalLoader from '../../Modal/ModalLoader'
 import "ace-builds/src-noconflict/mode-markdown";
 import "ace-builds/src-noconflict/theme-monokai";
 
@@ -21,7 +22,10 @@ class Wysiwyg extends React.Component {
             rule_obj: "",
             is_logged_in: false,
             loggedAs: "",
-            modalToggle: false
+            modalToggle: false,
+            showLoader: false,
+            updateError: false,
+            err:""
         }
     } 
 
@@ -84,7 +88,16 @@ class Wysiwyg extends React.Component {
         })
     } 
 
+    resetModal = () => {
+        this.setState({ 
+            showLoader: false,
+            updateError: false,
+            err:""
+        })
+    }
+
     onUpdateRules = (_mutations) => {   
+        this.setState({showLoader: true})
         const modMutations = _mutations.map((val, i) => {
             return({children:[{marks:[], text: val, _type: 'span',_key: (i+1)}], markDefs: [], style:"normal", _type: "block", _key: (Math.random() + 1).toString(36).substring(7) })
         }) 
@@ -109,13 +122,14 @@ class Wysiwyg extends React.Component {
             body: JSON.stringify(mutations)
         })
         .then(response => response.json())
-        .then(result => console.log(result))
-        .catch(error => console.error(error))
+        .then(result => this.setState({showLoader: false}))
+        .catch(error => this.setState({updateError: true,err:error}))
     }
 
     render() {
         return(
             <React.Fragment>
+                {(this.state.showLoader) ? <ModalLoader updateError={this.state.updateError} errorDesc={this.state.err} resetModal={this.state.resetModal} /> : ""}
                 <MarkdownButton  onToggleModal={this.onToggleModal} />
                 {(!this.state.is_logged_in) ? <Login onLogin={this.onLogin} /> : (
                     <div className="editor-container">   
