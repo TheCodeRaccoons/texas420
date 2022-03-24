@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.86ed5ade.css",
-    "main.js": "/static/js/main.06b01cf5.js",
+    "main.css": "/static/css/main.96dd750b.css",
+    "main.js": "/static/js/main.7e7cf73c.js",
     "static/media/LoginBG.png": "/static/media/LoginBG.22b975701c943de2bbbb.png",
     "static/media/RustLighthouse02-01.svg": "/static/media/RustLighthouse02-01.5c97e6fbc80791b410bb222b626f19d7.svg",
     "static/media/Roboto-Regular.ttf": "/static/media/Roboto-Regular.f25bd05915c1a3468d3d.ttf",
@@ -19,11 +19,11 @@
     "static/media/RustLighthouse01-01.svg": "/static/media/RustLighthouse01-01.bae9dfd394e4851f253f5cbcbd465608.svg",
     "static/media/RustLighthouse03-01.svg": "/static/media/RustLighthouse03-01.a17aa8606bb8e9f7a10c6a55db3383b3.svg",
     "index.html": "/index.html",
-    "main.86ed5ade.css.map": "/static/css/main.86ed5ade.css.map",
-    "main.06b01cf5.js.map": "/static/js/main.06b01cf5.js.map"
+    "main.96dd750b.css.map": "/static/css/main.96dd750b.css.map",
+    "main.7e7cf73c.js.map": "/static/js/main.7e7cf73c.js.map"
   },
   "entrypoints": [
-    "static/css/main.86ed5ade.css",
-    "static/js/main.06b01cf5.js"
+    "static/css/main.96dd750b.css",
+    "static/js/main.7e7cf73c.js"
   ]
 }
