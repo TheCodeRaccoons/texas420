@@ -16,5 +16,6 @@ export const urlFor = (source) => builder.image(source)
 export const credentials = ({
         usernameFog:process.env.REACT_APP_LOGIN_CRED_FOG,
         usernameClover:process.env.REACT_APP_LOGIN_CRED_CLOVER,
+        usernameSB:process.env.REACT_APP_LOGIN_CRED_SPONGEBOB,
         pw:process.env.REACT_APP_LOGIN_PW
     })

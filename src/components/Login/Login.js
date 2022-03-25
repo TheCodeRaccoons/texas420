@@ -20,6 +20,9 @@ const Login = (props) => {
         if( username === credentials.usernameFog){  
             validUsr = true;
         } 
+        if( username === credentials.usernameSB){  
+            validUsr = true;
+        } 
         if( username === credentials.usernameClover && !validUsr) {   
             validUsr = true;
         }
